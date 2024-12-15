@@ -1,0 +1,3 @@
+# F# Mutable Variable Shadowing Bug
+
+This example demonstrates a common issue in F# related to mutable variables and shadowing. The `swap` function appears to swap the values of `x` and `y`, but it only does so within its local scope. The values of `x` and `y` in the main scope remain unchanged. This is because F# passes values by value by default and the swap function is working with copies of the original variables, not direct references.  The solution demonstrates how to correctly swap mutable variables using references.
